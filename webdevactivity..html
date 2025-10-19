@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrray sorting and mapping</title>
+</head>
+<body>
+    <h1>Array soring and mapping</h1>
+    <button type="button" onclick="ascending()">ascending</button>
+    <button type="button" onclick="descending()">descending</button>
+    <button type="button" onclick="calculate()">calculate</button>
+    <p id="result"></p>
+    <p id="demo"></p>
+    <script>
+        var points=[40, 100, 1, 5, 25, 10];
+        document.getElementById("result").innerHTML=points;
+        function ascending(){
+            points.sort(function(a, b){return a-b});
+            document.getElementById("result").innerHTML=points;
+        }
+        function descending(){
+            points.sort(function(a, b){return b-a});
+            document.getElementById("result").innerHTML=points;
+        }
+        function calculate(){
+            var x=10;
+            var y=20;
+            var z=30;
+            var a=eval("x+y")+"<br>";
+            document.write("the value of a is"+a);
+            var b=eval(y-x)+"<br>";
+            document.write("the value of b is"+b);
+            var c=eval("z/y")+"<br>";
+            document.write("the value of c is"+c);
+        }
+
+    </script>
+</body>
+</html>
