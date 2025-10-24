@@ -9,8 +9,10 @@
     <button type="button" onclick="ascending()">ascending</button>
     <button type="button" onclick="descending()">descending</button>
     <button type="button" onclick="calculate()">calculate</button>
+    <button type="button" onclick="productmap()">mapping numbers to multiply by 2</button>
     <p id="result"></p>
     <p id="demo"></p>
+    <p id="mapping"></p>
     <script>
         var points=[40, 100, 1, 5, 25, 10];
         document.getElementById("result").innerHTML=points;
@@ -21,6 +23,14 @@
         function descending(){
             points.sort(function(a, b){return b-a});
             document.getElementById("result").innerHTML=points;
+        }
+        var numbers=[4, 9, 16, 25];
+        document.getElementById("mapping").innerHTML=numbers;
+       function productmap() {
+            var newarrray = numbers.map(function (num) {
+                return num * 2;
+            });
+            document.getElementById("mapping").innerHTML = newarrray;
         }
         function calculate(){
             var x=10;
